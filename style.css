@@ -1,0 +1,58 @@
+/* Estilos customizados */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa; /* Um cinza bem claro */
+}
+
+/* Layout em Grid Customizado para o catálogo de produtos */
+.product-grid {
+    display: grid;
+    /* Cria colunas responsivas: 
+       - Tenta criar o máximo de colunas com 280px de largura mínima.
+       - Cada coluna pode crescer até ocupar uma fração do espaço (1fr).
+    */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem; /* Espaçamento entre os cards */
+}
+
+.card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    border: 1px solid #e9ecef;
+    border-radius: 0.75rem; /* Bordas mais arredondadas */
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.card-img-top {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
+
+.navbar-brand {
+    font-weight: 700;
+}
+
+.category-title {
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #0d6efd;
+    display: inline-block;
+}
