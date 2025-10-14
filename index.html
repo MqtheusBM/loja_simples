@@ -11,22 +11,19 @@
     <!-- CSS Customizado -->
     <link rel="stylesheet" href="styles.css">
 
-    <!-- Tailwind CSS (para utilidades de estilo adicionais) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
 </head>
-<body class="bg-gray-50">
+<body class="bg-light">
 
     <!-- Cabeçalho de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
-        <div class="container mx-auto px-4">
-            <a class="navbar-brand text-blue-600" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+        <div class="container">
+            <a class="navbar-brand text-primary" href="index.html">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-inline-block align-text-top me-2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
                 Minha Loja
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,16 +32,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Início</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Eletrônicos</a>
+                        <a class="nav-link" href="eletronicos.html">Eletrônicos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Roupas</a>
+                        <a class="nav-link" href="roupas.html">Roupas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contato</a>
+                        <a class="nav-link" href="contato.html">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -52,89 +49,40 @@
     </nav>
 
     <!-- Conteúdo Principal -->
-    <main class="container mx-auto p-4 md:p-8">
+    <main class="container py-4 py-md-5">
 
-        <!-- Alerta de Promoção usando Bootstrap -->
-        <div class="alert alert-primary d-flex align-items-center shadow-sm rounded-lg" role="alert">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="bi bi-info-circle-fill flex-shrink-0 me-2" role="img" aria-label="Info:"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.135-.372a.575.575 0 0 1 .622.656zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
+        <!-- Alerta de Promoção -->
+        <div class="alert alert-primary d-flex align-items-center shadow-sm rounded-3" role="alert">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 me-2" role="img" aria-label="Info:"><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.135-.372a.575.575 0 0 1 .622.656zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/></svg>
             <div>
                 <strong>Aproveite!</strong> Frete grátis para todas as compras acima de R$ 150,00.
             </div>
         </div>
 
-        <!-- Seção de Eletrônicos -->
-        <section class="mt-8">
-            <h2 class="category-title text-2xl md:text-3xl">Eletrônicos</h2>
-            <div class="product-grid">
-                <!-- Produto 1 -->
-                <div class="card shadow-sm">
-                    <img src="https://placehold.co/600x400/3498db/ffffff?text=Fone+Bluetooth" class="card-img-top" alt="[Imagem de um Fone de Ouvido Bluetooth]">
-                    <div class="card-body">
-                        <h5 class="card-title font-semibold">Fone de Ouvido Bluetooth</h5>
-                        <p class="card-text text-gray-700">Som de alta fidelidade com cancelamento de ruído.</p>
-                        <p class="card-text font-bold text-xl text-gray-900 mt-2">R$ 249,90</p>
-                        <a href="#" class="btn btn-primary w-100 mt-3 font-semibold">Ver Detalhes</a>
+        <!-- Seção de Destaque das Categorias -->
+        <section class="mt-5 text-center">
+            <h2 class="category-title h2 d-inline-block">Navegue por nossas categorias</h2>
+            <div class="row mt-4">
+                <!-- Card Eletrônicos -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="https://placehold.co/600x300/3498db/ffffff?text=Eletrônicos" class="card-img-top" alt="[Imagem da categoria de Eletrônicos]">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Eletrônicos</h5>
+                            <p class="card-text text-muted">A mais alta tecnologia para o seu dia a dia.</p>
+                            <a href="eletronicos.html" class="btn btn-primary fw-semibold">Ver Produtos</a>
+                        </div>
                     </div>
                 </div>
-
-                <!-- Produto 2 -->
-                <div class="card shadow-sm">
-                    <img src="https://placehold.co/600x400/2ecc71/ffffff?text=Smartwatch" class="card-img-top" alt="[Imagem de um Smartwatch]">
-                    <div class="card-body">
-                        <h5 class="card-title font-semibold">Smartwatch Fit Pro</h5>
-                        <p class="card-text text-gray-700">Monitore sua saúde e atividades físicas com estilo.</p>
-                        <p class="card-text font-bold text-xl text-gray-900 mt-2">R$ 499,00</p>
-                        <a href="#" class="btn btn-primary w-100 mt-3 font-semibold">Ver Detalhes</a>
-                    </div>
-                </div>
-
-                <!-- Produto 3 -->
-                <div class="card shadow-sm">
-                    <img src="https://placehold.co/600x400/9b59b6/ffffff?text=Teclado" class="card-img-top" alt="[Imagem de um Teclado Mecânico]">
-                    <div class="card-body">
-                        <h5 class="card-title font-semibold">Teclado Mecânico Gamer</h5>
-                        <p class="card-text text-gray-700">Precisão e velocidade para suas melhores jogadas.</p>
-                        <p class="card-text font-bold text-xl text-gray-900 mt-2">R$ 350,50</p>
-                        <a href="#" class="btn btn-primary w-100 mt-3 font-semibold">Ver Detalhes</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Seção de Roupas -->
-        <section class="mt-8">
-            <h2 class="category-title text-2xl md:text-3xl">Roupas</h2>
-            <div class="product-grid">
-                <!-- Produto 4 -->
-                <div class="card shadow-sm">
-                    <img src="https://placehold.co/600x400/e74c3c/ffffff?text=Camiseta" class="card-img-top" alt="[Imagem de uma Camiseta de Algodão]">
-                    <div class="card-body">
-                        <h5 class="card-title font-semibold">Camiseta Básica de Algodão</h5>
-                        <p class="card-text text-gray-700">Conforto e versatilidade para o dia a dia.</p>
-                        <p class="card-text font-bold text-xl text-gray-900 mt-2">R$ 79,90</p>
-                        <a href="#" class="btn btn-primary w-100 mt-3 font-semibold">Ver Detalhes</a>
-                    </div>
-                </div>
-
-                <!-- Produto 5 -->
-                <div class="card shadow-sm">
-                    <img src="https://placehold.co/600x400/1abc9c/ffffff?text=Calça+Jeans" class="card-img-top" alt="[Imagem de uma Calça Jeans]">
-                    <div class="card-body">
-                        <h5 class="card-title font-semibold">Calça Jeans Slim</h5>
-                        <p class="card-text text-gray-700">Corte moderno que se ajusta perfeitamente ao corpo.</p>
-                        <p class="card-text font-bold text-xl text-gray-900 mt-2">R$ 189,90</p>
-                        <a href="#" class="btn btn-primary w-100 mt-3 font-semibold">Ver Detalhes</a>
-                    </div>
-                </div>
-                
-                <!-- Produto 6 -->
-                <div class="card shadow-sm">
-                    <img src="https://placehold.co/600x400/f1c40f/ffffff?text=Jaqueta" class="card-img-top" alt="[Imagem de uma Jaqueta Corta-vento]">
-                    <div class="card-body">
-                        <h5 class="card-title font-semibold">Jaqueta Corta-vento</h5>
-                        <p class="card-text text-gray-700">Leve e ideal para proteção em dias de vento.</p>
-                        <p class="card-text font-bold text-xl text-gray-900 mt-2">R$ 210,00</p>
-                        <a href="#" class="btn btn-primary w-100 mt-3 font-semibold">Ver Detalhes</a>
+                <!-- Card Roupas -->
+                <div class="col-md-6 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="https://placehold.co/600x300/e74c3c/ffffff?text=Roupas" class="card-img-top" alt="[Imagem da categoria de Roupas]">
+                        <div class="card-body">
+                            <h5 class="card-title fw-semibold">Roupas</h5>
+                            <p class="card-text text-muted">Estilo e conforto para todas as ocasiões.</p>
+                            <a href="roupas.html" class="btn btn-primary fw-semibold">Ver Produtos</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,8 +91,8 @@
     </main>
     
     <!-- Rodapé -->
-    <footer class="bg-white mt-8 py-5 border-t">
-        <div class="container mx-auto text-center text-gray-600">
+    <footer class="bg-white mt-5 py-5 border-top">
+        <div class="container text-center text-muted">
             <p>&copy; 2025 Minha Loja. Todos os direitos reservados.</p>
         </div>
     </footer>
