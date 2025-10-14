@@ -4,17 +4,6 @@ body {
     background-color: #f8f9fa; /* Um cinza bem claro */
 }
 
-/* Layout em Grid Customizado para o catálogo de produtos */
-.product-grid {
-    display: grid;
-    /* Cria colunas responsivas: 
-       - Tenta criar o máximo de colunas com 280px de largura mínima.
-       - Cada coluna pode crescer até ocupar uma fração do espaço (1fr).
-    */
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem; /* Espaçamento entre os cards */
-}
-
 .card {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
     border: 1px solid #e9ecef;
@@ -54,5 +43,54 @@ body {
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 2px solid #0d6efd;
-    display: inline-block;
 }
+
+/* Estilos para a Seção de Contato */
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* --- ESTILOS PARA SEÇÕES HERO (BANNER) --- */
+
+/* Overlay escuro para melhorar a legibilidade do texto */
+.hero-section::before, .hero-section-eletronicos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Garante que o conteúdo (texto) fique acima do overlay */
+.hero-section > div, .hero-section-eletronicos > div {
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos para a Página de Roupas */
+.hero-section {
+    position: relative;
+    height: 50vh; /* 50% da altura da tela */
+    background-image: url('https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?q=80&w=2070&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito parallax */
+}
+
+/* Estilos para a Página de Eletrônicos */
+.hero-section-eletronicos {
+    position: relative;
+    height: 50vh;
+    background-image: url('https://images.unsplash.com/photo-1526738549149-8e07eca6c147?q=80&w=1925&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito parallax */
+}
+
