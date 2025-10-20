@@ -82,6 +82,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Efeito parallax */
+    color: #fff;
 }
 
 /* Estilos para a Página de Eletrônicos */
@@ -92,5 +93,43 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* Efeito parallax */
+    color: #fff;
 }
 
+
+/* --- ESTILOS PARA O CARRINHO (OFFCANVAS) --- */
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 0.75rem;
+}
+
+.cart-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-right: 1rem;
+}
+
+.cart-item-info {
+    flex-grow: 1; /* Faz o nome e preço ocuparem o espaço disponível */
+}
+
+.cart-item-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.cart-item-price {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.btn-remover-item {
+    padding: 0.1rem 0.5rem;
+    font-size: 1.2rem;
+}
